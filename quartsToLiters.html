@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Quarts To Liters Conversion</title>
+
+        <script>
+        "use strict";
+
+        function LitersConv() {
+            let x = parseFloat(document.getElementById('quartsInput').value);
+            let y = 0.946353;
+
+            let l = x * y;
+
+            parseFloat(document.getElementById("LitersOutput").innerHTML = l);
+        }
+        </script>
+
+    </head>
+
+    <body>
+        Please Enter the Quarts Volume<br>
+        <input type="text" id='quartsInput'> <br>
+        <button type='button' onclick='LitersConv()'> Convert To Liters </button>
+        <div id="LitersOutput"></div>
+    </body>
+</html>

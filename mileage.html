@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+    <head>
+        
+        <meta charset="utf-8">
+        <title>Mileage Converter</title>
+
+        <script>
+        "use strict";
+
+        function milesper() {
+            // Formula is (Ending Odometer - Beginning Odometer) / Gallons of Gas = MPG
+            // (8200 - 8100) / 5 = 20 MPG
+
+            let beg = parseFloat(document.getElementById('BegOdometer').value)
+            let end = parseFloat(document.getElementById('EndOdometer').value);
+
+            let gas = parseFloat(document.getElementById('GalGas').value);
+
+            let mpg = (end - beg) / gas;
+
+            parseFloat(document.getElementById("MPGoutput").innerHTML = mpg);
+
+
+        }
+        </script>
+
+    </head>
+
+    <body>
+
+        Starting Odometer : <input type="text" id='BegOdometer'> <br>
+        Ending Odometer : <input type="text" id='EndOdometer'> <br>
+        Gallons of Gas Used: <input type="text" id='GalGas'> <br>
+
+        <button type='button' onclick='milesper()'> Convert to M.P.G.</button>
+        <div id='MPGoutput'></div>
+
+    </body>
+</html>
